@@ -1,0 +1,600 @@
+﻿@page
+@model WebDevEngineeringPortal.Pages.IndexModel
+@{
+    ViewData["Title"] = "Portal de Ingeniería Web & Lenguajes";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"]</title>
+    <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #0d1117;
+                color: #c9d1d9;
+                margin: 0;
+                padding: 40px;
+                background-image: radial-gradient(#21262d 1px, transparent 1px);
+                background-size: 24px 24px;
+            }
+
+            h1 {
+                color: #58a6ff;
+                border-bottom: 2px solid #30363d;
+                padding-bottom: 10px;
+            }
+
+            .tech-card {
+                background-color: #161b22;
+                border: 1px solid #30363d;
+                border-radius: 8px;
+                padding: 20px;
+                margin-bottom: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            }
+
+            .tech-header {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .tech-logo {
+                width: 48px;
+                height: 48px;
+                object-fit: contain;
+            }
+
+            .btn-details {
+                background-color: #238636;
+                color: white;
+                border: none;
+                padding: 8px 14px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 600;
+                display: inline-block;
+                margin-top: 10px;
+                transition: background-color 0.2s;
+            }
+
+                .btn-details:hover {
+                    background-color: #2ea043;
+                }
+
+            .btn-close {
+                background-color: #da3633;
+                color: white;
+                border: none;
+                padding: 6px 12px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: 600;
+                margin-top: 15px;
+            }
+
+                .btn-close:hover {
+                    background-color: #f85149;
+                }
+
+            .details-box {
+                background-color: #0d1117;
+                border-left: 4px solid #58a6ff;
+                padding: 15px;
+                margin-top: 15px;
+                border-radius: 0 6px 6px 0;
+                display: none;
+            }
+
+            .code-snippet {
+                background-color: #010409;
+                border: 1px solid #30363d;
+                border-radius: 6px;
+                padding: 12px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.9rem;
+                color: #7ee787;
+                overflow-x: auto;
+                margin-top: 10px;
+                white-space: pre-wrap;
+            }
+    </style>
+</head>
+<body>
+
+    <div style="max-width: 900px; margin: 0 auto;">
+        <p style="color: #8b949e; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">Architecture & Systems Engineering</p>
+        <h1>Portal de Desarrollo Web & Lenguajes</h1>
+        <p>Explora la arquitectura Backend y Frontend, con C# como núcleo principal del repositorio y soporte global de lenguajes modernos.</p>
+
+        <!-- C# (Core / Backend Principal) -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C# Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #a371f7;">C# (.NET Core / ASP.NET)</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend Principal & Arquitectura (Núcleo del Repositorio)</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje de programación orientado a objetos robusto que alimenta la lógica del servidor y Razor Pages de este portal.</p>
+            <button class="btn-details" onclick="toggleDetails('csharp-details')">Ver detalles técnicos</button>
+            <div id="csharp-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: C#</h4>
+                <ul>
+                    <li>Tipado estricto, gestión segura de memoria y recolección de basura avanzada.</li>
+                    <li>Soporte nativo para programación asíncrona de alto rendimiento (async/await).</li>
+                    <li>Motor lógico central que otorga el mayor porcentaje de peso de código fuente en GitHub.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    using Microsoft.AspNetCore.Mvc.RazorPages;
+
+                    public class IndexModel : PageModel
+                    {
+                    public string Mensaje { get; set; } = "Portal Activo en C#";
+                    public void OnGet() { /* Lógica del servidor */ }
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('csharp-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Python -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #3572A5;">Python</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend / APIs & IA</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje versátil de sintaxis limpia, altamente utilizado en desarrollo web mediante frameworks backend y ciencia de datos.</p>
+            <button class="btn-details" onclick="toggleDetails('python-details')">Ver detalles técnicos</button>
+            <div id="python-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Python</h4>
+                <ul>
+                    <li>Tipado dinámico y legibilidad basada en indentación estricta.</li>
+                    <li>Frameworks robustos como Django y micro-frameworks rápidos como Flask.</li>
+                    <li>Ideal para procesamiento de datos, automatización e integración con Inteligencia Artificial.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    from flask import Flask
+                    app = Flask(__name__)
+
+                    @@app.route("/")
+                    def inicio():
+                    return "Servidor Python Activo"
+                </div>
+                <button class="btn-close" onclick="toggleDetails('python-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- PHP -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #777BB4;">PHP</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend Tradicional & CMS</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje de código abierto diseñado específicamente para el desarrollo web de servidor y aplicaciones dinámicas.</p>
+            <button class="btn-details" onclick="toggleDetails('php-details')">Ver detalles técnicos</button>
+            <div id="php-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: PHP</h4>
+                <ul>
+                    <li>Ejecución eficiente en el servidor e integración nativa con bases de datos SQL.</li>
+                    <li>Soporte de frameworks potentes y modernos como Laravel y Symfony.</li>
+                    <li>Base fundamental de la mayoría de gestores de contenido (CMS) como WordPress.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    &lt;?php
+                    $mensaje = "Portal Web con PHP";
+                    echo "&lt;h1&gt;" . $mensaje . "&lt;/h1&gt;";
+                    ?&gt;
+                </div>
+                <button class="btn-close" onclick="toggleDetails('php-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Java -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #f89820;">Java</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend Empresarial</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje orientado a objetos multiplataforma, altamente seguro y escalable para entornos corporativos y bancarios.</p>
+            <button class="btn-details" onclick="toggleDetails('java-details')">Ver detalles técnicos</button>
+            <div id="java-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Java</h4>
+                <ul>
+                    <li>Principio "Write Once, Run Anywhere" mediante la Máquina Virtual de Java (JVM).</li>
+                    <li>Ecosistema empresarial líder con Spring Boot para microservicios y APIs.</li>
+                    <li>Control estricto de tipos y gestión robusta de concurrencia.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    public class PortalWeb {
+                    public static void main(String[] args) {
+                    System.out.println("Backend Java Iniciado");
+                    }
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('java-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Ruby -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" alt="Ruby Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #CC342D;">Ruby</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend / Startups</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje dinámico centrado en la simplicidad y la productividad, famoso por su framework web Ruby on Rails.</p>
+            <button class="btn-details" onclick="toggleDetails('ruby-details')">Ver detalles técnicos</button>
+            <div id="ruby-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Ruby</h4>
+                <ul>
+                    <li>Filosofía de diseño orientada a la felicidad del programador y legibilidad de código.</li>
+                    <li>Convención sobre configuración para acelerar el desarrollo de prototipos y MVPs.</li>
+                    <li>Ecosistema modular gestionado mediante Gemas (Gems).</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    class Portal
+                    def saludar
+                    puts "Servidor Ruby on Rails Activo"
+                    end
+                    end
+                </div>
+                <button class="btn-close" onclick="toggleDetails('ruby-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Go -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #00ADD8;">Go (Golang)</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend de Alto Rendimiento</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje compilado de código abierto creado por Google para construir servicios rápidos, seguros y altamente concurrentes.</p>
+            <button class="btn-details" onclick="toggleDetails('go-details')">Ver detalles técnicos</button>
+            <div id="go-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Go</h4>
+                <ul>
+                    <li>Concurrencia nativa ultra eficiente basada en Goroutines y canales.</li>
+                    <li>Tiempos de compilación extremadamente rápidos a binarios ejecutables nativos.</li>
+                    <li>Ideal para microservicios masivos e infraestructura en la nube.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    package main
+                    import "fmt"
+
+                    func main() {
+                    fmt.Println("API en Go ejecutándose")
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('go-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Rust -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" alt="Rust Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #dea584;">Rust</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Sistemas & WebAssembly</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje enfocado en la seguridad de memoria y el rendimiento extremo, usado para servidores críticos y WebAssembly.</p>
+            <button class="btn-details" onclick="toggleDetails('rust-details')">Ver detalles técnicos</button>
+            <div id="rust-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Rust</h4>
+                <ul>
+                    <li>Gestión de memoria estricta sin recolector de basura (Garbage Collector).</li>
+                    <li>Prevención de errores de concurrencia en tiempo de compilación.</li>
+                    <li>Alto rendimiento para backend ultrarrápido y compilación a WebAssembly (Wasm).</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    fn main() {
+                    println!("Servidor Web en Rust optimizado");
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('rust-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- TypeScript -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #3178c6;">TypeScript</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Frontend / JavaScript Tipado</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Superconjunto de JavaScript que añade tipado estricto opcional para mejorar la escalabilidad en grandes aplicaciones.</p>
+            <button class="btn-details" onclick="toggleDetails('ts-details')">Ver detalles técnicos</button>
+            <div id="ts-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: TypeScript</h4>
+                <ul>
+                    <li>Tipado estático en tiempo de compilación y detección temprana de errores.</li>
+                    <li>Soporte avanzado para interfaces, genéricos y programación orientada a objetos.</li>
+                    <li>Compilación limpia a JavaScript nativo compatible con cualquier navegador.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    interface Usuario {
+                    nombre: string;
+                    edad: number;
+                    }
+                    const dev: Usuario = { nombre: "José", edad: 28 };
+                </div>
+                <button class="btn-close" onclick="toggleDetails('ts-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Kotlin -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #7f52ff;">Kotlin</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend / Multiplataforma</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje moderno que corre sobre la JVM, altamente eficiente para desarrollo backend con Spring Boot y Ktor.</p>
+            <button class="btn-details" onclick="toggleDetails('kotlin-details')">Ver detalles técnicos</button>
+            <div id="kotlin-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Kotlin</h4>
+                <ul>
+                    <li>Seguridad contra nulos integrada directamente en el sistema de tipos.</li>
+                    <li>Interoperabilidad total con Java y código optimizado para la JVM.</li>
+                    <li>Soporte de programación funcional y corrutinas para código asíncrono limpio.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    fun main() {
+                    val mensaje: String = "Backend con Kotlin"
+                    println(mensaje)
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('kotlin-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Swift -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="Swift Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #f05138;">Swift</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Servidor / Ecosistema Apple</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje rápido y seguro creado por Apple, utilizable en el backend web mediante frameworks modernos como Vapor.</p>
+            <button class="btn-details" onclick="toggleDetails('swift-details')">Ver detalles técnicos</button>
+            <div id="swift-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Swift</h4>
+                <ul>
+                    <li>Seguridad de memoria estricta y sintaxis expresiva de alto rendimiento.</li>
+                    <li>Desarrollo de APIs del lado del servidor con frameworks como Vapor o Kitura.</li>
+                    <li>Inferencia de tipos avanzada y gestión moderna de opcionales.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    let mensaje = "Servidor Web en Swift"
+                    print(mensaje)
+                </div>
+                <button class="btn-close" onclick="toggleDetails('swift-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Scala -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" alt="Scala Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #dc322f;">Scala</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend / Sistemas Distribuidos</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Combina programación orientada a objetos y funcional en la JVM, ideal para procesamiento masivo de datos y web escalable.</p>
+            <button class="btn-details" onclick="toggleDetails('scala-details')">Ver detalles técnicos</button>
+            <div id="scala-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Scala</h4>
+                <ul>
+                    <li>Fusión potente de paradigmas funcionales y orientados a objetos.</li>
+                    <li>Ejecución sobre la JVM con interoperabilidad fluida con librerías Java.</li>
+                    <li>Diseñado para manejar sistemas altamente concurrentes y distribuidos.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    object PortalScala {
+                    def main(args: Array[String]): Unit = {
+                    println("Scala Backend Activo")
+                    }
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('scala-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Elixir -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elixir/elixir-original.svg" alt="Elixir Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #4e2a84;">Elixir</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Backend Concurrente (Phoenix)</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lenguaje funcional y tolerante a fallos que corre sobre la máquina virtual BEAM, ideal para aplicaciones web en tiempo real.</p>
+            <button class="btn-details" onclick="toggleDetails('elixir-details')">Ver detalles técnicos</button>
+            <div id="elixir-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Elixir</h4>
+                <ul>
+                    <li>Construido sobre la robustez y concurrencia de Erlang (BEAM).</li>
+                    <li>Framework web Phoenix de altísimo rendimiento para tiempo real (WebSockets).</li>
+                    <li>Inmutabilidad de datos y sistemas altamente tolerantes a fallos distribuidos.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    defmodule Portal do
+                    def iniciar do
+                    IO.puts("Servidor Elixir Phoenix Activo")
+                    end
+                    end
+                </div>
+                <button class="btn-close" onclick="toggleDetails('elixir-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- Angular -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" alt="Angular Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #dd0031;">Angular</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Frontend / SPA Framework</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Plataforma y framework para crear aplicaciones web escalables de una sola página (SPA) basadas en TypeScript.</p>
+            <button class="btn-details" onclick="toggleDetails('angular-details')">Ver detalles técnicos</button>
+            <div id="angular-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: Angular</h4>
+                <ul>
+                    <li>Arquitectura basada en componentes modulares y reutilizables.</li>
+                    <li>Inyección de dependencias robusta y enlace de datos bidireccional (Two-way binding).</li>
+                    <li>
+                        Sistema de enrutamientfont-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                        <div class="code-snippet">
+                            @@Component({
+                            selector: 'app-root',o avanzado y formularios reactivos de gran escala.
+                        </li>
+                </ul>
+                <p style="margin-bottom: 5px; 
+                    template: `&lt;h1&gt;{{ titulo }}&lt;/h1&gt;`
+                    })
+                    export class AppComponent {
+                    titulo = 'Portal Angular';
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('angular-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- HTML5 -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #f07178;">HTML5</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Frontend</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Estructura semántica básica y esqueleto fundamental para aplicaciones web.</p>
+            <button class="btn-details" onclick="toggleDetails('html-details')">Ver detalles técnicos</button>
+            <div id="html-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: HTML5</h4>
+                <ul>
+                    <li>Modelo de contenido semántico avanzado (&lt;article&gt;, &lt;section&gt;, &lt;nav&gt;).</li>
+                    <li>APIs nativas integradas (Canvas, Web Storage, Geolocation).</li>
+                    <li>Optimización estructural para motores de búsqueda y accesibilidad (ARIA).</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    &lt;section&gt;
+                    &lt;h2&gt;Arquitectura Web&lt;/h2&gt;
+                    &lt;p&gt;Estructura semántica optimizada.&lt;/p&gt;
+                    &lt;/section&gt;
+                </div>
+                <button class="btn-close" onclick="toggleDetails('html-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- CSS3 -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #79c0ff;">CSS3</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Frontend</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Diseño visual, maquetación adaptativa (Responsive) y estilizado de interfaces.</p>
+            <button class="btn-details" onclick="toggleDetails('css-details')">Ver detalles técnicos</button>
+            <div id="css-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: CSS3</h4>
+                <ul>
+                    <li>Sistemas de maquetación avanzada con Flexbox y CSS Grid.</li>
+                    <li>Animaciones fluidas por hardware y transiciones optimizadas.</li>
+                    <li>Variables CSS nativas y diseño adaptativo con Media Queries.</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    .tech-card {
+                    background-color: #161b22;
+                    display: flex;
+                    border-radius: 8px;
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('css-details')">Cerrar información</button>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="tech-card">
+            <div class="tech-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="tech-logo" />
+                <div>
+                    <h2 style="margin: 0; color: #e3b341;">JavaScript</h2>
+                    <p style="margin: 5px 0 0 0; color: #8b949e;">Frontend / Fullstack</p>
+                </div>
+            </div>
+            <p style="margin-top: 15px;">Lógica dinámica en tiempo real, manipulación del DOM e interactividad client-side.</p>
+            <button class="btn-details" onclick="toggleDetails('js-details')">Ver detalles técnicos</button>
+            <div id="js-details" class="details-box">
+                <h4 style="margin-top:0; color: #58a6ff;">Especificaciones Técnicas: JavaScript</h4>
+                <ul>
+                    <li>Programación asíncrona avanzada (Promises, async/await, Event Loop).</li>
+                    <li>Manipulación dinámica del DOM y gestión de eventos en tiempo real.</li>
+                    <li>Ecosistema moderno compatible con entornos del lado del servidor (Node.js).</li>
+                </ul>
+                <p style="margin-bottom: 5px; font-weight: 600; color: #8b949e;">Sintaxis Básica:</p>
+                <div class="code-snippet">
+                    function toggleDetails(id) {
+                    const box = document.getElementById(id);
+                    box.style.display = box.style.display === "block" ? "none" : "block";
+                    }
+                </div>
+                <button class="btn-close" onclick="toggleDetails('js-details')">Cerrar información</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+            function toggleDetails(id) {
+                const box = document.getElementById(id);
+                box.style.display = (box.style.display === "block") ? "none" : "block";
+            }
+    </script>
+</body>
+</html>
