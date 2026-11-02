@@ -97,3 +97,4 @@ C:\Users\jose ochoa\source\repos\WebDevEngineeringPortal\WebDevEngineeringPortal
 C:\Users\jose ochoa\source\repos\WebDevEngineeringPortal\WebDevEngineeringPortal\obj\Debug\net10.0\WebDevEngineeringPortal.genruntimeconfig.cache
 C:\Users\jose ochoa\source\repos\WebDevEngineeringPortal\WebDevEngineeringPortal\obj\Debug\net10.0\ref\WebDevEngineeringPortal.dll
 C:\Users\jose ochoa\source\repos\WebDevEngineeringPortal\WebDevEngineeringPortal\obj\Debug\net10.0\WebDevEn.DEFB845A.Up2Date
+C:\Users\jose ochoa\source\repos\WebDevEngineeringPortal\WebDevEngineeringPortal\obj\Debug\net10.0\WebDevEngineeringPortal.sourcelink.json
