@@ -1,2 +1,4 @@
-﻿*.cshtml linguist-language=C#
+﻿# Forzar que los archivos Razor y C# sean reconocidos como C#
+*.[cC][sH][tH][mM][lL] linguist-language=C#
+*.cshtml linguist-language=C#
 *.cs linguist-language=C#
